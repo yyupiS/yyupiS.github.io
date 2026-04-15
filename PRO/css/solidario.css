@@ -1,0 +1,146 @@
+/* VARIABLES Y RESET */
+:root {
+  --azul-oscuro: #00264d;
+  --azul-lasalle: #003366;
+  --dorado-lasalle: #ffcc00;
+  --blanco-puro: #ffffff;
+  --gris-fondo: #f8f9fa;
+  --gris-texto: #444444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--blanco-puro);
+  color: var(--gris-texto);
+  line-height: 1.8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*  HEADER  */
+.main-header {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco-puro);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.logo span {
+  font-size: 0.8rem;
+  color: var(--dorado-lasalle);
+  display: block;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.main-nav ul li a {
+  color: var(--blanco-puro);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav ul li a.active {
+  color: var(--dorado-lasalle);
+  border-bottom: 2px solid var(--dorado-lasalle);
+}
+
+/*  SECCION DESPLEGABLES  */
+.seccion-solidaria {
+  padding: 60px 0;
+  background-color: #f4f4f4;
+  min-height: 70vh;
+}
+
+.bloque-desplegable {
+  margin-bottom: 15px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bloque-desplegable input {
+  display: none;
+}
+
+.titulo-bloque {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contenido-bloque {
+  max-height: 0;
+  background-color: #fff;
+  transition: max-height 0.4s ease;
+  overflow: hidden;
+}
+
+.bloque-desplegable input:checked ~ .contenido-bloque {
+  max-height: 500px;
+  border-top: 1px solid #ccc;
+}
+
+.enlaces-internos {
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.enlaces-internos a {
+  text-decoration: none;
+  color: var(--azul-lasalle);
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.enlaces-internos a:hover {
+  background-color: #eef5ff;
+}
+
+/* FOOTER */
+.main-footer {
+  background-color: #1a1a1a;
+  color: #cccccc;
+  padding: 40px 0;
+}
+
+.main-footer .slogan {
+  font-style: italic;
+  color: var(--dorado-lasalle);
+  margin-top: 10px;
+}

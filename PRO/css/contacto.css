@@ -1,0 +1,175 @@
+:root {
+  --azul-oscuro: #00264d;
+  --azul-lasalle: #003366;
+  --dorado-lasalle: #ffcc00;
+  --blanco-puro: #ffffff;
+  --gris-fondo: #f8f9fa;
+  --gris-texto: #444444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--blanco-puro);
+  color: var(--gris-texto);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.main-header {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco-puro);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.logo span {
+  font-size: 0.8rem;
+  color: var(--dorado-lasalle);
+  display: block;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.main-nav ul li a {
+  color: var(--blanco-puro);
+  text-decoration: none;
+  font-weight: 600;
+}
+.main-nav ul li a.active {
+  color: var(--dorado-lasalle);
+  border-bottom: 2px solid var(--dorado-lasalle);
+}
+
+.seccion-contacto {
+  padding: 60px 0;
+  background-color: var(--gris-fondo);
+  min-height: 80vh;
+}
+
+.grid-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.tarjeta-contacto {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.borde-superior {
+  height: 6px;
+  background: var(--azul-lasalle);
+}
+
+.cuerpo-tarjeta {
+  padding: 30px;
+}
+
+.tarjeta-contacto h2,
+.tarjeta-contacto h3 {
+  color: var(--azul-oscuro);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--dorado-lasalle);
+  display: inline-block;
+}
+
+.dato-contacto {
+  margin-bottom: 20px;
+}
+
+.dato-contacto strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.dato-contacto p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.lista-sedes {
+  list-style: none;
+}
+
+.lista-sedes li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.foto-contacto {
+  position: relative;
+  height: 100%;
+}
+
+.foto-contacto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.etiqueta-foto {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 51, 102, 0.85);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main-footer {
+  background-color: #1a1a1a;
+  color: #cccccc;
+  padding: 40px 0;
+}
+
+.main-footer .slogan {
+  font-style: italic;
+  color: var(--dorado-lasalle);
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .grid-contacto {
+    grid-template-columns: 1fr;
+  }
+}
